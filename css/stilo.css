@@ -31,7 +31,9 @@ header{
 
 nav{
     grid-area: sd;
+    display: flex;
     position: sticky;
+    flex-direction: column;
     top: 0;
     margin-bottom: 60px;
     background-color: rgb(206, 75, 130);
@@ -64,11 +66,11 @@ nav ol{
 nav ol li a{
     text-decoration: none;
     color: whitesmoke;
-    font-size: 30px;
-    padding: 10px;
+    font-size: 5vh;
+    /* padding: 10px; */
 }
 li{
-    margin: 100px 0;
+    margin: 12vh 0;
     list-style: none;
 }
 .logo{
@@ -76,12 +78,12 @@ li{
     top: 0;*/
     left: 85.5px;
     /*background-color: rgb(206, 75, 130);*/
-    height: 105px;
-    width:169px;
+    height: 17vh;
+    width: 18vw;
     background-image: url(../imagenes/logop.png);
     background-repeat: no-repeat;
     background-size: contain;
-    background-position:center; 
+    background-position: center; 
 }
 
 /*//////////////////////////////////////Menu//////////////////////////////////////////*/
@@ -134,6 +136,14 @@ nav ol li a:hover{
 /*Pagina principal*/
 
 #videoPrincipal{
-    width: 640px;
-    height: 360px;
+    width: 60vw;
+    aspect-ratio: 16/9;
+    margin-bottom: 10vh;
+}
+
+#imagen-principal{
+    width:80%;
+    object-fit: contain;
+    aspect-ratio: 8/8;
+    margin-bottom: 10vh;
 }
