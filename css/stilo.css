@@ -1,0 +1,139 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgba(206, 75, 130, 0.21);
+}
+.contenedor{
+    display: grid;
+    grid-gap: 10px ;
+    grid:". sd hd hd hd hd hd hd hd ." minmax(50px, auto)
+         ". sd hd hd hd hd hd hd hd ." minmax(50px, auto)
+         ". sd cont cont cont cont cont cont cont ." minmax(100px, auto)
+         ". sd cont cont cont cont cont cont cont ." minmax(100px, auto)
+         ". sd cont cont cont cont cont cont cont ." minmax(100px, auto)
+         ". sd cont cont cont cont cont cont cont ." minmax(100px, auto)
+         ". . cont cont cont cont cont cont cont ." minmax(100px, auto)
+         ". . cont cont cont cont cont cont cont ." minmax(100px, auto)
+         ". . cont cont cont cont cont cont cont ." minmax(100px, auto)
+         ". ft ft ft ft ft ft ft ft ." minmax(50px, auto)
+        /0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+}
+
+header{
+    grid-area: hd;
+    /*border: solid 10px black;*/
+    background-image: url(../imagenes/Captura%20de%20pantalla%202022-03-22%20184328.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: rgb(206, 75, 130);
+}
+
+nav{
+    grid-area: sd;
+    position: sticky;
+    top: 0;
+    margin-bottom: 60px;
+    background-color: rgb(206, 75, 130);
+}
+
+.contenido-principal{
+    grid-area: cont;
+    background-color: rgba(206, 75, 130, 0.62);
+    text-align: center;
+   
+}
+
+footer{
+    grid-area: ft;
+    background-color: rgb(206, 75, 130);
+    color: whitesmoke;
+    text-align: center;
+
+}
+
+footer p{
+   text-align: center; 
+}
+
+nav ol{
+    
+    padding: 0;
+    text-align: center;
+}
+nav ol li a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 30px;
+    padding: 10px;
+}
+li{
+    margin: 100px 0;
+    list-style: none;
+}
+.logo{
+    /*position: fixed;
+    top: 0;*/
+    left: 85.5px;
+    /*background-color: rgb(206, 75, 130);*/
+    height: 105px;
+    width:169px;
+    background-image: url(../imagenes/logop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position:center; 
+}
+
+/*//////////////////////////////////////Menu//////////////////////////////////////////*/
+
+.desplegableli:hover .desplegable{
+    display: flex;
+    flex-direction:column;
+}
+.desplegableli:hover .desplegable2{
+    display: flex;
+    flex-direction:column;
+}
+nav ol li a:hover{
+    color: black;
+}
+
+.desplegable{
+    display: none;  
+    position: relative;  
+    left: 170px;
+    top: -40px;
+    margin-bottom:-100px;
+    background-color: rgb(206, 75, 130); 
+}
+.desplegable2{
+    display: none;
+    position: relative;  
+    left: 170px;
+    top: -40px;
+    background-color: rgb(206, 75, 130);
+}
+.desplegable a:hover {
+    color: black;
+}
+.desplegable2 a:hover {
+    color: black;
+}
+.desplegable a{
+    text-align: center;
+    padding: 0 10px;
+    border-top: solid 5px white;
+}
+
+.desplegable2 a{
+    text-align: center;
+    padding: 0 10px;
+    border-top: solid 5px white;
+}
+
+/*Pagina principal*/
+
+#videoPrincipal{
+    width: 640px;
+    height: 360px;
+}
