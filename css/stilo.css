@@ -1,7 +1,17 @@
+@font-face {
+    font-family: 'arcaderegular';
+    src: url('../stilo-letra/arcade.regular-webfont.woff2') format('woff2'),
+         url('../stilo-letra/arcade.regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 body{
     margin: 0;
     padding: 0;
     background-color: rgba(206, 75, 130, 0.21);
+    text-shadow: 1px 1px 2px black;
 }
 .contenedor{
     display: grid;
@@ -21,12 +31,19 @@ body{
 
 header{
     grid-area: hd;
-    /*border: solid 10px black;*/
-    background-image: url(../imagenes/Captura%20de%20pantalla%202022-03-22%20184328.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
     background-color: rgb(206, 75, 130);
+    text-align: center;
+    color: whitesmoke;
+    font-family: 'arcaderegular';
+}
+header h1{
+    margin: 0;
+    font-size: 7vmax;
+}
+header p{
+    margin: 0;
+    font-size: 3vmax;
+    color: rgba(29, 91, 223, 0.925);
 }
 
 nav{
@@ -37,6 +54,7 @@ nav{
     top: 0;
     margin-bottom: 60px;
     background-color: rgb(206, 75, 130);
+    z-index: 1;
 }
 
 .contenido-principal{
@@ -90,10 +108,12 @@ li{
 
 .desplegableli:hover .desplegable{
     display: flex;
+    visibility:visible;
     flex-direction:column;
 }
 .desplegableli:hover .desplegable2{
     display: flex;
+    visibility:visible;
     flex-direction:column;
 }
 nav ol li a:hover{
@@ -101,19 +121,26 @@ nav ol li a:hover{
 }
 
 .desplegable{
-    display: none;  
+    flex-direction:column;
+    display: flex;  
+    visibility: hidden;
     position: relative;  
-    left: 170px;
+    left: 18vw;
     top: -40px;
-    margin-bottom:-100px;
+    margin-bottom:-12vh;
     background-color: rgb(206, 75, 130); 
+    z-index: 1;
 }
 .desplegable2{
-    display: none;
+    flex-direction:column;
+    display: flex;  
+    visibility: hidden;
     position: relative;  
-    left: 170px;
+    left: 18vw;
     top: -40px;
-    background-color: rgb(206, 75, 130);
+    margin-bottom:-10vh;
+    background-color: rgb(206, 75, 130); 
+    z-index: 1;
 }
 .desplegable a:hover {
     color: black;
