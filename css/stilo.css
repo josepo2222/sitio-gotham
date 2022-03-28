@@ -16,21 +16,22 @@ body{
 .contenedor{
     display: grid;
     grid-gap: 10px ;
-    grid:". sd hd hd hd hd hd hd hd ." minmax(50px, auto)
-         ". sd hd hd hd hd hd hd hd ." minmax(50px, auto)
-         ". sd cont cont cont cont cont cont cont ." minmax(100px, auto)
-         ". sd cont cont cont cont cont cont cont ." minmax(100px, auto)
-         ". sd cont cont cont cont cont cont cont ." minmax(100px, auto)
-         ". sd cont cont cont cont cont cont cont ." minmax(100px, auto)
-         ". . cont cont cont cont cont cont cont ." minmax(100px, auto)
-         ". . cont cont cont cont cont cont cont ." minmax(100px, auto)
-         ". . cont cont cont cont cont cont cont ." minmax(100px, auto)
-         ". ft ft ft ft ft ft ft ft ." minmax(50px, auto)
+    grid:". sd hd hd hd hd hd hd hd ." minmax(4vh, auto)
+         ". sd hd hd hd hd hd hd hd ." minmax(4vh, auto)
+         ". sd cont cont cont cont cont cont cont ." minmax(8vh, auto)
+         ". sd cont cont cont cont cont cont cont ." minmax(8vh, auto)
+         ". sd cont cont cont cont cont cont cont ." minmax(8vh, auto)
+         ". sd cont cont cont cont cont cont cont ." minmax(8vh, auto)
+         ". . cont cont cont cont cont cont cont ." minmax(8vh, auto)
+         ". . cont cont cont cont cont cont cont ." minmax(8vh, auto)
+         ". . cont cont cont cont cont cont cont ." minmax(8vh, auto)
+         ". ft ft ft ft ft ft ft ft ." minmax(4vh, auto)
         /0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
 }
 
 header{
     grid-area: hd;
+    display: flex;
     background-color: rgb(206, 75, 130);
     text-align: center;
     color: whitesmoke;
@@ -45,7 +46,14 @@ header p{
     font-size: 3vmax;
     color: rgba(29, 91, 223, 0.925);
 }
-
+.header-imagenes{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+header img{
+    width: 20%;
+}
 nav{
     grid-area: sd;
     display: flex;
@@ -84,24 +92,20 @@ nav ol{
 nav ol li a{
     text-decoration: none;
     color: whitesmoke;
-    font-size: 5vh;
-    /* padding: 10px; */
+    font-size: 2.5vmax;
 }
 li{
     margin: 12vh 0;
     list-style: none;
 }
 .logo{
-    /*position: fixed;
-    top: 0;*/
     left: 85.5px;
-    /*background-color: rgb(206, 75, 130);*/
     height: 17vh;
-    width: 18vw;
-    background-image: url(../imagenes/logop.png);
+    width: 17vw;
+    background-image: url(../imagenes/game-controller-2-removebg-preview.png);
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center; 
+    background-position: center;
 }
 
 /*//////////////////////////////////////Menu//////////////////////////////////////////*/
@@ -114,8 +118,9 @@ li{
 .desplegableli:hover .desplegable2{
     display: flex;
     visibility:visible;
-    flex-direction:column;
+    flex-direction:column; 
 }
+
 nav ol li a:hover{
     color: black;
 }
@@ -125,7 +130,7 @@ nav ol li a:hover{
     display: flex;  
     visibility: hidden;
     position: relative;  
-    left: 18vw;
+    left: 17vw;
     top: -40px;
     margin-bottom:-12vh;
     background-color: rgb(206, 75, 130); 
@@ -136,8 +141,8 @@ nav ol li a:hover{
     display: flex;  
     visibility: hidden;
     position: relative;  
-    left: 18vw;
-    top: -40px;
+    left: 17vw;
+    top: -12vh;
     margin-bottom:-10vh;
     background-color: rgb(206, 75, 130); 
     z-index: 1;
@@ -173,4 +178,16 @@ nav ol li a:hover{
     object-fit: contain;
     aspect-ratio: 8/8;
     margin-bottom: 10vh;
+}
+
+/*Videojuegos*/
+
+.muchas-imagenes{
+    width: 100%;
+    display: flex;
+}
+
+.muchas-imagenes .imagen img{
+    width: 80%;
+    aspect-ratio: 16/9;
 }
