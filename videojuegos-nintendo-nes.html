@@ -52,26 +52,27 @@
                 <h2>Videojuegos Nintendo Entertainment System</h2>
                 
                 <div class="galeria">
-                    <img src="imagenes/nes-super-mario-3.jpg" alt="Galeria CSS 1" />
-                    <img src="imagenes/nes-Bubble Bobble.jpg" alt="Galeria CSS 2" />
-                    <img src="imagenes/nes-Pro Wrestling.jpg" alt="Galeria CSS 3" />
-                    <img src="imagenes/nes-tetris.jpg" alt="Galeria CSS 4" />
+                    <img id="imagen-1" src="imagenes/nes-super-mario-3.jpg" alt="Galeria CSS 1" />
+                    <img id="imagen-2" src="imagenes/nes-Bubble Bobble.jpg" alt="Galeria CSS 2" />
+                    <img id="imagen-3" src="imagenes/nes-Pro Wrestling.jpg" alt="Galeria CSS 3" />
+                    <img id="imagen-4" src="imagenes/nes-tetris.jpg" alt="Galeria CSS 4" />
                     
-               
+                    
 
-                <form name="formulario1" id="formulario1" method="post" action="procesar_datos.php">
-                    
-                    <label for="juego"> Elegir juego</label>
-                    <select name="juego" id="juego">
-                        <option id=1 selected value="Super Mario Bros. 3">Super Mario Bros. 3</option>
-                        <option id=2 value="Bubble Bobble">"Bubble Bobble</option>
-                        <option id=3 value="Pro Wrestling">Pro Wrestling</option>
-                        <option id=4 value="Tetris">Tetris</option>
-                    </select> 
-                    <input type="button" value="Compro"/>
-                    <input type="button" value="Vendo"/>
+                    <form name="formulario1" id="formulario1" method="post" action="procesar_datos.php">
+                        
+                        <label for="juego"> Elegir juego</label>
+                        <select name="juego" id="juego" onchange="revisar();">
+                            <option id="1" value="Super Mario Bros. 3">Super Mario Bros. 3</option>
+                            <option id="2" value="Bubble Bobble">Bubble Bobble</option>
+                            <option id="3" value="Pro Wrestling">Pro Wrestling</option>
+                            <option id="4" value="Tetris">Tetris</option>
+                        </select> 
+                        <input type="button" value="Compro"/>
+                        <input type="button" value="Vendo"/>
                 
-                </form>
+                    </form>
+                    <p>nes super mario 3 en perfectas condiciones</p>
             </div>
 
 
@@ -88,16 +89,58 @@
         </div>
 
         <script>
-            var valorGaleria=document.getElementById("juego");
-            var elegidoGaleria=valorGaleria.options[valorGaleria.selectedIndex];
+            var valorGaleria = document.getElementById("juego");
+            var elegidoGaleria = valorGaleria.options[valorGaleria.selectedIndex];
+            var elegidoJuego=(document.getElementById("juego").selectedIndex)+1;
+
+            /* var idElegida = elegidoGaleria.getAttribute('id'); */
             
-            /* var opt = sel.options[sel.selectedIndex]; */
-            /* getvalue.addEventListener('input',function()
-            {
+            var elemento=document.getElementById("imagen-"+elegidoJuego);   
+            var x = elemento.style.opacity= 1;
+            /* visibility="visible"; */
+            var juegoViejo=1;
+            function revisar(){
+                /* elemento.style.visibility="hidden"; */
+                /* valorGaleria = document.getElementById("juego");
+                elegidoGaleria = valorGaleria.options[valorGaleria.selectedIndex];
+                idElegida = elegidoGaleria.getAttribute('id'); */
+                elegidoJuego=(document.getElementById("juego").selectedIndex)+1;
                 
+                if(elegidoJuego!=juegoViejo){
+                    elemento=document.getElementById("imagen-"+juegoViejo);
+                    elemento.style.opacity=0;
+                    /* visibility="hidden"; */
+                    juegoViejo=elegidoJuego;
+                }
+                console.log("entra");
+                switch(elegidoJuego){
+
+                    case 1:
+                        /* elemento.style.visibility="hidden"; */
+                        elemento=document.getElementById("imagen-"+elegidoJuego);
+                        elemento.style.opacity=1;
+                        /* visibility="visible"; */
+
+
+                    break; 
+                    case 2:
+                        /* elemento.style.visibility="hidden"; */
+                        elemento=document.getElementById("imagen-"+elegidoJuego);
+                        elemento.style.opacity=1;
+
+                    break;
+                    case 3:
+                        elemento=document.getElementById("imagen-"+elegidoJuego);
+                        elemento.style.opacity=1;
+
+                    break;
+
+                }
+
             }
-            ) */
-        
+
+            /* setInterval(revisar,10); */
+
         
         </script>
 
