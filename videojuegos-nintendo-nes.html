@@ -52,13 +52,6 @@
                 <h2>Videojuegos Nintendo Entertainment System</h2>
                 
                 <div class="galeria">
-                    <img id="imagen-1" src="imagenes/nes-super-mario-3.jpg" alt="Galeria CSS 1" />
-                    <img id="imagen-2" src="imagenes/nes-Bubble Bobble.jpg" alt="Galeria CSS 2" />
-                    <img id="imagen-3" src="imagenes/nes-Pro Wrestling.jpg" alt="Galeria CSS 3" />
-                    <img id="imagen-4" src="imagenes/nes-tetris.jpg" alt="Galeria CSS 4" />
-                    
-                    
-
                     <form name="formulario1" id="formulario1" method="post" action="procesar_datos.php">
                         
                         <label for="juego"> Elegir juego</label>
@@ -72,7 +65,16 @@
                         <input type="button" value="Vendo"/>
                 
                     </form>
-                    <p>nes super mario 3 en perfectas condiciones</p>
+                    <p id="descripcion">Juego NES Super Mario 3 en perfectas condiciones</p>
+                    <div class="galeria-imagenes">
+                        <img id="imagen-1" src="imagenes/nes-super-mario-3.jpg" alt="Galeria CSS 1" />
+                        <img id="imagen-2" src="imagenes/nes-Bubble Bobble.jpg" alt="Galeria CSS 2" />
+                        <img id="imagen-3" src="imagenes/nes-Pro Wrestling.jpg" alt="Galeria CSS 3" />
+                        <img id="imagen-4" src="imagenes/nes-tetris.jpg" alt="Galeria CSS 4" />
+                    </div>
+                    
+
+                    
             </div>
 
 
@@ -89,46 +91,43 @@
         </div>
 
         <script>
-
-            var valorGaleria = document.getElementById("juego");
-            var elegidoGaleria = valorGaleria.options[valorGaleria.selectedIndex];
             var elegidoJuego=(document.getElementById("juego").selectedIndex)+1;
             var elemento=document.getElementById("imagen-"+elegidoJuego);   
             var x = elemento.style.opacity= 1;
             var juegoViejo=1;
+            var intento;
             function revisar(){
-
                 elegidoJuego=(document.getElementById("juego").selectedIndex)+1;
-                
                 if(elegidoJuego!=juegoViejo){
                     elemento=document.getElementById("imagen-"+juegoViejo);
                     elemento.style.opacity=0;
                     juegoViejo=elegidoJuego;
+                    
+                    switch(elegidoJuego){
+                        case 1:
+                        console.log("entra en el 1");
+                        intento=document.getElementById("descripcion").innerText ="Juego Nes Super Mario Brothers 3";
+                        break;
+
+                        case 2:
+                        console.log("entra en el 2");
+                        document.getElementById("descripcion").innerText ="Juego Nes BuBBle Bobble";
+                        break;
+
+                        case 3:
+                        console.log("entra en el 3");
+                        document.getElementById("descripcion").innerText ="Juego Nes Pro Wrestling";
+                        break;
+
+                        case 4:
+                        console.log("entra en el 4");
+                        document.getElementById("descripcion").innerText ="Juego Nes Tetris";
+                        break;
+
+                    }
                 }
-                console.log("entra");
-                switch(elegidoJuego){
-
-                    case 1:
-
-                        elemento=document.getElementById("imagen-"+elegidoJuego);
-                        elemento.style.opacity=1;
-
-                    break; 
-                    case 2:
-
-                        elemento=document.getElementById("imagen-"+elegidoJuego);
-                        elemento.style.opacity=1;
-
-                    break;
-                    case 3:
-
-                        elemento=document.getElementById("imagen-"+elegidoJuego);
-                        elemento.style.opacity=1;
-
-                    break;
-
-                }
-
+                elemento=document.getElementById("imagen-"+elegidoJuego);
+                elemento.style.opacity=1;
             }
         
         </script>
