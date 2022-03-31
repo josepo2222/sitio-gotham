@@ -30,10 +30,10 @@
             <nav>
                 <div class="logo"></div>
                 <ol>
-                    <li><a href="#">Inicio</a></li>
+                    <li><a href="inicio.html">Inicio</a></li>
                     <li class="desplegableli"> <a href="#">Videojuegos</a>
                         <div class="desplegable">
-                            <a href="#">Nes</a>
+                            <a href="videojuegos-nintendo-nes.html">Nes</a>
                             <a href="#">GameBoy</a>
                         </div>
                     </li>   
@@ -89,47 +89,39 @@
         </div>
 
         <script>
+
             var valorGaleria = document.getElementById("juego");
             var elegidoGaleria = valorGaleria.options[valorGaleria.selectedIndex];
             var elegidoJuego=(document.getElementById("juego").selectedIndex)+1;
-
-            /* var idElegida = elegidoGaleria.getAttribute('id'); */
-            
             var elemento=document.getElementById("imagen-"+elegidoJuego);   
             var x = elemento.style.opacity= 1;
-            /* visibility="visible"; */
             var juegoViejo=1;
             function revisar(){
-                /* elemento.style.visibility="hidden"; */
-                /* valorGaleria = document.getElementById("juego");
-                elegidoGaleria = valorGaleria.options[valorGaleria.selectedIndex];
-                idElegida = elegidoGaleria.getAttribute('id'); */
+
                 elegidoJuego=(document.getElementById("juego").selectedIndex)+1;
                 
                 if(elegidoJuego!=juegoViejo){
                     elemento=document.getElementById("imagen-"+juegoViejo);
                     elemento.style.opacity=0;
-                    /* visibility="hidden"; */
                     juegoViejo=elegidoJuego;
                 }
                 console.log("entra");
                 switch(elegidoJuego){
 
                     case 1:
-                        /* elemento.style.visibility="hidden"; */
+
                         elemento=document.getElementById("imagen-"+elegidoJuego);
                         elemento.style.opacity=1;
-                        /* visibility="visible"; */
-
 
                     break; 
                     case 2:
-                        /* elemento.style.visibility="hidden"; */
+
                         elemento=document.getElementById("imagen-"+elegidoJuego);
                         elemento.style.opacity=1;
 
                     break;
                     case 3:
+
                         elemento=document.getElementById("imagen-"+elegidoJuego);
                         elemento.style.opacity=1;
 
@@ -138,9 +130,6 @@
                 }
 
             }
-
-            /* setInterval(revisar,10); */
-
         
         </script>
 
