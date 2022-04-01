@@ -79,7 +79,6 @@ footer{
     background-color: rgb(206, 75, 130);
     color: whitesmoke;
     text-align: center;
-
 }
 
 footer p{
@@ -87,7 +86,6 @@ footer p{
 }
 
 nav ol{
-    
     padding: 0;
     text-align: center;
 }
@@ -112,10 +110,13 @@ li{
 
 /*//////////////////////////////////////Menu//////////////////////////////////////////*/
 
-.desplegableli:hover .desplegable{
+/* .desplegableli:hover .desplegable{
     display: flex;
     visibility:visible;
     flex-direction:column;
+    flex-wrap: wrap;
+    width: 100%;
+   
 }
 .desplegableli:hover .desplegable2{
     display: flex;
@@ -125,16 +126,33 @@ li{
 
 nav ol li a:hover{
     color: black;
+} */
+/* .row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
 }
+display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1
 
+ */
+/*  .columna{
+    display: flex;
+    flex-direction: column;
+    
+    flex: 1;
+ }
 .desplegable{
     flex-direction:column;
     display: flex;  
     visibility: hidden;
-    position: relative;  
+    position: relative;
     left: 17vw;
     top: -40px;
-    margin-bottom:-12vh;
+    margin-bottom:-40vh;
     background-color: rgb(206, 75, 130); 
     z-index: 1;
 }
@@ -165,7 +183,7 @@ nav ol li a:hover{
     text-align: center;
     padding: 0 10px;
     border-top: solid 5px white;
-}
+} */
 
 /*Pagina principal*/
 
@@ -227,3 +245,6 @@ nav ol li a:hover{
     margin-top: 5vh;
     font-size: 3vh;
 }
+
+
+/*//////////////////////////////////////Menu//////////////////////////////////////////*/
