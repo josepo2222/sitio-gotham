@@ -110,13 +110,10 @@ li{
 
 /*//////////////////////////////////////Menu//////////////////////////////////////////*/
 
-/* .desplegableli:hover .desplegable{
+.desplegableli:hover .desplegable{
     display: flex;
     visibility:visible;
     flex-direction:column;
-    flex-wrap: wrap;
-    width: 100%;
-   
 }
 .desplegableli:hover .desplegable2{
     display: flex;
@@ -126,44 +123,37 @@ li{
 
 nav ol li a:hover{
     color: black;
-} */
-/* .row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-}
-display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1
+} 
 
- */
-/*  .columna{
+.columna{
     display: flex;
-    flex-direction: column;
-    
-    flex: 1;
- }
+    border-bottom: solid 5px white;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.columna:first-child{
+    border-top: solid 5px white;
+}
+
 .desplegable{
     flex-direction:column;
     display: flex;  
     visibility: hidden;
-    position: relative;
+    position: absolute;
     left: 17vw;
-    top: -40px;
-    margin-bottom:-40vh;
+    top: 15vh;
     background-color: rgb(206, 75, 130); 
     z-index: 1;
+    
 }
 .desplegable2{
     flex-direction:column;
     display: flex;  
     visibility: hidden;
-    position: relative;  
+    position: absolute;  
     left: 17vw;
-    top: -12vh;
-    margin-bottom:-10vh;
+    top: 78vh;
     background-color: rgb(206, 75, 130); 
     z-index: 1;
 }
@@ -176,14 +166,15 @@ display: flex;
 .desplegable a{
     text-align: center;
     padding: 0 10px;
-    border-top: solid 5px white;
+    font-size: 2vmax;
+    padding: 10px;
 }
 
 .desplegable2 a{
     text-align: center;
     padding: 0 10px;
     border-top: solid 5px white;
-} */
+}
 
 /*Pagina principal*/
 
@@ -248,3 +239,42 @@ display: flex;
 
 
 /*//////////////////////////////////////Menu//////////////////////////////////////////*/
+
+/* nav {
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.desplegable{
+    display: flex;
+    flex-direction: row;
+    position:absolute;
+    flex-wrap:wrap ;
+    align-content: flex-start;
+    width: 100%;
+    right: -200px;
+    top: 120px; */
+    /* background-color: rgb(206, 75, 130);
+} *//* } */
+/* .desplegable a{
+    background-color: rgb(206, 75, 130);
+    margin: 5px;
+    padding: 5px;
+}
+.desplegable .columna{
+    
+    flex-basis: 100%;
+    flex: 4;
+}
+
+.desplegableli:hover .desplegable{
+    display: flex;
+    visibility:visible;
+    flex-direction:column; 
+}
+
+a:hover {
+    color: black;
+} */
+
