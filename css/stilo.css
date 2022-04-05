@@ -16,8 +16,6 @@ body{
 .contenedor{
     display: grid;
     gap: 1vmax;
-    /* grid-column-gap: 1.5vh ;
-    grid-row-gap: 1.5vw; */
     grid:". sd hd hd hd hd hd hd hd ." minmax(4vh, auto)
          ". sd hd hd hd hd hd hd hd ." minmax(4vh, auto)
          ". sd cont cont cont cont cont cont cont ." minmax(8vh, auto)
@@ -130,7 +128,6 @@ nav ol li a:hover{
     border-bottom: solid 5px white;
     align-items: center;
     justify-content: space-between;
-
 }
 .columna:first-child{
     border-top: solid 5px white;
@@ -142,7 +139,7 @@ nav ol li a:hover{
     visibility: hidden;
     position: absolute;
     left: 17vw;
-    top: 15vh;
+    top: 32vh;
     background-color: rgb(206, 75, 130); 
     z-index: 1;
     
@@ -151,11 +148,13 @@ nav ol li a:hover{
     flex-direction:column;
     display: flex;  
     visibility: hidden;
-    position: absolute;  
-    left: 17vw;
-    top: 78vh;
+    position: relative; 
+    left: 17vw; 
+    top: -14vh;
+    /* left: 23.4vw; */
     background-color: rgb(206, 75, 130); 
     z-index: 1;
+    /* margin: -13vh; */
 }
 .desplegable a:hover {
     color: black;
@@ -229,7 +228,6 @@ nav ol li a:hover{
     transition: 3s;
     width: 50vw;
     height: 90vh;
-    /* max-height: 30wh; */
 }
 
 .galeria p{
@@ -237,44 +235,16 @@ nav ol li a:hover{
     font-size: 3vh;
 }
 
+.descripcion-producto{
+    margin-top:95vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-bottom: 10vh;
+}
 
-/*//////////////////////////////////////Menu//////////////////////////////////////////*/
+.formulario{
 
-/* nav {
     display: flex;
     flex-direction: column;
-   
-}
 
-.desplegable{
-    display: flex;
-    flex-direction: row;
-    position:absolute;
-    flex-wrap:wrap ;
-    align-content: flex-start;
-    width: 100%;
-    right: -200px;
-    top: 120px; */
-    /* background-color: rgb(206, 75, 130);
-} *//* } */
-/* .desplegable a{
-    background-color: rgb(206, 75, 130);
-    margin: 5px;
-    padding: 5px;
 }
-.desplegable .columna{
-    
-    flex-basis: 100%;
-    flex: 4;
-}
-
-.desplegableli:hover .desplegable{
-    display: flex;
-    visibility:visible;
-    flex-direction:column; 
-}
-
-a:hover {
-    color: black;
-} */
-
