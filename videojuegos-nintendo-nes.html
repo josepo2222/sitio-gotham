@@ -31,11 +31,28 @@
                 <div class="logo"></div>
                 <ol>
                     <li><a href="inicio.html">Inicio</a></li>
-                    <li class="desplegableli"> <a href="#">Videojuegos</a>
+                    <li class="desplegableli"> <a href="videojuegos.html">Videojuegos</a>
                         <div class="desplegable">
-                            <a href="videojuegos-nintendo-nes.html">Nes</a>
+                            <div class="columna">
+                            <a href="#">Nes</a>
+                            <a href="#">Master System</a>
+                            <a href="#">Atari 7800</a>
+                            <a href="#">Game Boy</a>
+                        </div><div class="columna">
+                            <a href="#">Neo Geo</a>
+                            <a href="#">Game Boy Color</a>
+                            <a href="#">PS1</a>
+                            <a href="#">Sega Gamegear</a>
+                        </div><div class="columna">
+                            <a href="#">PS2</a>
+                            <a href="#">Dreamcast</a>
+                            <a href="#">Xbox</a>
+                            <a href="#">GameBoy Advance</a>
+                        </div><div class="columna">
+                            <a href="#">Nintendo wii</a>
                             <a href="#">GameBoy</a>
                         </div>
+                    </div>
                     </li>   
                     <li><a href="#">Consolas</a></li>
                     <li class="desplegableli"><a href="#">Peliculas</a>
@@ -61,7 +78,7 @@
                             <option id="3" value="Pro Wrestling">Pro Wrestling</option>
                             <option id="4" value="Tetris">Tetris</option>
                         </select> 
-                        <input type="button" value="Compro"/>
+                        <input type="button" value="Compro" onclick="" />
                         <input type="button" value="Vendo"/>
                 
                     </form>
@@ -75,10 +92,18 @@
                     
 
                     
-            </div>
+                </div>
 
+                <div class="descripcion-producto">
+                    <h2>Caracterisiticas</h2>
+                    <p>Estado producto :<br/>Perfecto</p>
+                    <p>Descripcion:<br/>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Doloribus unde aut beatae magni nobis, qui, cumque illo inventore sit 
+                        obcaecati ipsa reiciendis fugiat, cum officia veritatis eum blanditiis 
+                        esse deserunt.  </p>
+                    <p>Precio:30€ negociable</p>
 
-
+                </div>
             </div>
             
             <footer><p>Copy &copy; 2022 Created by JOSEBA......GOTHAM-RETRO-GAME</p></footer>
@@ -102,7 +127,7 @@
                     elemento=document.getElementById("imagen-"+juegoViejo);
                     elemento.style.opacity=0;
                     juegoViejo=elegidoJuego;
-                    
+
                     switch(elegidoJuego){
                         case 1:
                         console.log("entra en el 1");
