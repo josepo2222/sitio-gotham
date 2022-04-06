@@ -69,7 +69,7 @@
                 <h2>Videojuegos Nintendo Entertainment System</h2>
                 
                 <div class="galeria">
-                    <form name="formulario1" id="formulario1" method="post" action="procesar_datos.php">
+                    <form name="formulario1" method="post" class="form-container-1">
                         
                         <label for="juego"> Elegir juego</label>
                         <select name="juego" id="juego" onchange="revisar();">
@@ -78,9 +78,7 @@
                             <option id="3" value="Pro Wrestling">Pro Wrestling</option>
                             <option id="4" value="Tetris">Tetris</option>
                         </select> 
-                        <input type="button" value="Compro" onclick="" />
-                        <input type="button" value="Vendo"/>
-                
+
                     </form>
                     <p id="descripcion">Juego NES Super Mario 3 en perfectas condiciones</p>
                     <div class="galeria-imagenes">
@@ -104,11 +102,29 @@
                     <p>Precio:30€ negociable</p>
 
                 </div>
+                <form name="formulario1" method="post" class="form-container-1">
+                    <input type="button" class="boton" onclick="openForm()" value="Compro"/>
+                    <input type="button" class="boton" onclick="" value="Vendo"/>
+                </form>
             </div>
             
             <footer><p>Copy &copy; 2022 Created by JOSEBA......GOTHAM-RETRO-GAME</p></footer>
         
-        
+            <div class="form-popup" id="myForm">
+                <form action="/action_page.php" class="form-container">
+                    <h1>Comprar</h1>
+                    <label for="nombre"><b>Nombre:</b></label>
+                    <input type="text" placeholder="Juan" name="nombre" required>
+                    <label for="email"><b>Email:</b></label>
+                    <input type="text" placeholder="Introduce tu email" name="email" required>
+              
+                    <label for="telefono"><b>Telefono:</b></label>
+                    <input type="tel" placeholder="Introduce tu telefono" name="telefono" required>
+              
+                    <button type="submit" class="btn">Enviar</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">Cerrar</button>
+                </form>
+              </div>
         
         
         
@@ -155,6 +171,14 @@
                 elemento.style.opacity=1;
             }
         
+            function openForm() {
+                document.getElementById("myForm").style.display = "block";
+            }
+
+            function closeForm() {
+                document.getElementById("myForm").style.display = "none";
+            }
+            
         </script>
 
 	</body>
