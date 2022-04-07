@@ -11,7 +11,7 @@ body{
     margin: 0;
     padding: 0;
     background-color: rgba(206, 75, 130, 0.21);
-    text-shadow: 1px 1px 2px black;
+    
     
 }
 .contenedor{
@@ -39,10 +39,12 @@ header{
     font-family: 'arcaderegular';
 }
 header h1{
+    text-shadow: 1px 1px 2px black;
     margin: 0;
     font-size: 7vmax;
 }
 header p{
+    text-shadow: 1px 1px 2px black;
     margin: 0;
     font-size: 3vmax;
     color: rgba(29, 91, 223, 0.925);
@@ -56,6 +58,7 @@ header img{
     width: 20%;
 }
 nav{
+    text-shadow: 1px 1px 2px black;
     grid-area: sd;
     display: flex;
     position: sticky;
@@ -243,6 +246,7 @@ nav ol li a:hover{
     margin-bottom: 10vh;
 }
 /* formulario */
+
 .open-button {
     background-color: #555;
     color: white;
@@ -263,10 +267,19 @@ nav ol li a:hover{
     border: 3px solid #f1f1f1;
     z-index: 9;
   }
+.form-popup h3{
+    text-align: center;
+    font-size: 5vh;
+    margin: 0;
+}
+.form-popup p{
+    text-align: center;
+    font-size: 2.5vh;
+}
 .form-container {
     max-width: 20vw;
     padding: 1vmax;
-    background-color: /* whitesmoke */rgb(228, 124, 167);
+    background-color: rgb(228, 124, 167);
   }
 .form-container input[type=text], .form-container input[type=tel]{
     width: 90%;
@@ -277,9 +290,9 @@ nav ol li a:hover{
     
 }
 .form-container-1 #juego{
-    width: 30%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
+    width: 30vw;
+    padding: 5px;
+    /* margin: 5px 0 px 0; */
     border: groove whitesmoke 4px;
     background:rgba(167, 87, 120, 0.62);
     text-align: center;
@@ -298,11 +311,11 @@ nav ol li a:hover{
 .form-container-1 .boton{
     background-color: rgb(206, 75, 130);
     color: whitesmoke;
-    padding: 3vh 2vw;
+    padding: 2vh 2vw;
     border: groove whitesmoke 4px;
     cursor: pointer;
-    width: 20%;
-    margin-bottom:1vh;
+    width: 15vw;
+    margin-bottom:5vh;
     opacity: 0.8;
 }
 .form-container .cancel {
@@ -316,3 +329,7 @@ nav ol li a:hover{
     color: whitesmoke;
     opacity: 0.8;
 }
+textarea {
+    resize: none;
+    background:rgba(143, 65, 98, 0.62);
+  }

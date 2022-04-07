@@ -94,17 +94,17 @@
 
                 <div class="descripcion-producto">
                     <h2>Caracterisiticas</h2>
-                    <p>Estado producto :<br/>Perfecto</p>
-                    <p>Descripcion:<br/>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    <p>Estado producto :<br/><span id="producto-estado">Perfecto</span></p>
+                    <p>Descripcion:<br/><span id="producto-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                         Doloribus unde aut beatae magni nobis, qui, cumque illo inventore sit 
                         obcaecati ipsa reiciendis fugiat, cum officia veritatis eum blanditiis 
-                        esse deserunt.  </p>
-                    <p>Precio:30€ negociable</p>
+                        esse deserunt.</span></p>
+                    <p>Precio:<span id="producto-precio">30€ negociable</span></p>
 
                 </div>
                 <form name="formulario1" method="post" class="form-container-1">
                     <input type="button" class="boton" onclick="openForm()" value="Compro"/>
-                    <input type="button" class="boton" onclick="" value="Vendo"/>
+                    <input type="button" class="boton" onclick="openForm();funcionCambio()" value="Vendo"/>
                 </form>
             </div>
             
@@ -112,14 +112,18 @@
         
             <div class="form-popup" id="myForm">
                 <form action="/action_page.php" class="form-container">
-                    <h1>Comprar</h1>
+                    <h3 id="comprar-vender">Comprar</h3>
+                    <p id="comprar-vender-informacion">Reservamos tu juego y vienes a recojerlo</p>
                     <label for="nombre"><b>Nombre:</b></label>
-                    <input type="text" placeholder="Juan" name="nombre" required>
+                    <input type="text" placeholder="Juan" name="nombre" id="nombre" required>
                     <label for="email"><b>Email:</b></label>
                     <input type="text" placeholder="Introduce tu email" name="email" required>
               
                     <label for="telefono"><b>Telefono:</b></label>
                     <input type="tel" placeholder="Introduce tu telefono" name="telefono" required>
+
+                    <label for="comentario"><b>Comentario:</b></label>
+                    <textarea name="comentario" rows="4" cols="39" resize="none" placeholder="Dinos tu consulta u informacion adicional"></textarea>
               
                     <button type="submit" class="btn">Enviar</button>
                     <button type="button" class="btn cancel" onclick="closeForm()">Cerrar</button>
@@ -148,21 +152,34 @@
                         case 1:
                         console.log("entra en el 1");
                         intento=document.getElementById("descripcion").innerText ="Juego Nes Super Mario Brothers 3";
+                        document.getElementById("producto-estado").innerText ="Perfecto";
+                        document.getElementById("producto-descripcion").innerText ="Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus unde aut beatae magni nobis, qui, cumque illo inventore sit obcaecati ipsa reiciendis fugiat, cum officia veritatis eum blanditiis esse deserunt.";
+                        document.getElementById("producto-precio").innerText ="30€ negociables";
                         break;
 
                         case 2:
                         console.log("entra en el 2");
                         document.getElementById("descripcion").innerText ="Juego Nes BuBBle Bobble";
+                        document.getElementById("producto-estado").innerText ="Muy usado";
+                        document.getElementById("producto-descripcion").innerText ="ipsum dolor sit amet consectetur adipisicing elit. Doloribus unde aut beatae magni nobis, qui, cumque illo inventore sit obcaecati ipsa reiciendis fugiat, cum officia veritatis eum blanditiis esse deserunt.";
+                        document.getElementById("producto-precio").innerText ="45€";
+                        
                         break;
 
                         case 3:
                         console.log("entra en el 3");
                         document.getElementById("descripcion").innerText ="Juego Nes Pro Wrestling";
+                        document.getElementById("producto-estado").innerText ="Usado";
+                        document.getElementById("producto-descripcion").innerText ="Dolor ipsum dolor sit amet consectetur adipisicing elit. Doloribus unde aut beatae magni nobis, qui, cumque illo inventore sit obcaecati ipsa reiciendis fugiat, cum officia veritatis eum blanditiis esse deserunt.";
+                        document.getElementById("producto-precio").innerText ="15€";
                         break;
 
                         case 4:
                         console.log("entra en el 4");
                         document.getElementById("descripcion").innerText ="Juego Nes Tetris";
+                        document.getElementById("producto-estado").innerText ="Perfecto";
+                        document.getElementById("producto-descripcion").innerText ="Sit ipsum dolor sit amet consectetur adipisicing elit. Doloribus unde aut beatae magni nobis, qui, cumque illo inventore sit obcaecati ipsa reiciendis fugiat, cum officia veritatis eum blanditiis esse deserunt.";
+                        document.getElementById("producto-precio").innerText ="75€";
                         break;
 
                     }
@@ -173,12 +190,16 @@
         
             function openForm() {
                 document.getElementById("myForm").style.display = "block";
+                document.getElementById("nombre").focus();
             }
 
             function closeForm() {
                 document.getElementById("myForm").style.display = "none";
             }
-            
+            function funcionCambio(){
+                document.getElementById("comprar-vender").innerText="Vendo";
+                document.getElementById("comprar-vender-informacion").innerText="Reservamos tu juego y vienes a recojerlo";
+            }
         </script>
 
 	</body>
