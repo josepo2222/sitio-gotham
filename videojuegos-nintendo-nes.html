@@ -31,10 +31,10 @@
                 <div class="logo"></div>
                 <ol>
                     <li><a href="inicio.html">Inicio</a></li>
-                    <li class="desplegableli"> <a href="videojuegos.html">Videojuegos</a>
+                    <li id="pagina-actual" class="desplegableli"> <a class="esta-pagina" href="videojuegos.html">Videojuegos</a>
                         <div class="desplegable">
                             <div class="columna">
-                            <a href="#">Nes</a>
+                            <a class="esta-pagina" id="pagina-actual" href="#">Nes</a>
                             <a href="#">Master System</a>
                             <a href="#">Atari 7800</a>
                             <a href="#">Game Boy</a>
@@ -80,7 +80,7 @@
                         </select> 
 
                     </form>
-                    <p id="descripcion">Juego NES Super Mario 3 en perfectas condiciones</p>
+                    <p id="descripcion">Juego NES Super Mario 3</p>
                     <div class="galeria-imagenes">
                         <img id="imagen-1" src="imagenes/nes-super-mario-3.jpg" alt="Galeria CSS 1" />
                         <img id="imagen-2" src="imagenes/nes-Bubble Bobble.jpg" alt="Galeria CSS 2" />
@@ -103,7 +103,7 @@
 
                 </div>
                 <form name="formulario1" method="post" class="form-container-1">
-                    <input type="button" class="boton" onclick="openForm()" value="Compro"/>
+                    <input type="button" class="boton" onclick="openForm();funcionCambio1()" value="Compro"/>
                     <input type="button" class="boton" onclick="openForm();funcionCambio()" value="Vendo"/>
                 </form>
             </div>
@@ -115,15 +115,15 @@
                     <h3 id="comprar-vender">Comprar</h3>
                     <p id="comprar-vender-informacion">Reservamos tu juego y vienes a recojerlo</p>
                     <label for="nombre"><b>Nombre:</b></label>
-                    <input type="text" placeholder="Juan" name="nombre" id="nombre" required>
+                    <input class="ventana-escritura" type="text" placeholder="Juan" name="nombre" id="nombre" required>
                     <label for="email"><b>Email:</b></label>
-                    <input type="text" placeholder="Introduce tu email" name="email" required>
+                    <input class="ventana-escritura" type="text" placeholder="Introduce tu email" name="email" required>
               
                     <label for="telefono"><b>Telefono:</b></label>
-                    <input type="tel" placeholder="Introduce tu telefono" name="telefono" required>
+                    <input class="ventana-escritura" type="tel" placeholder="Introduce tu telefono" name="telefono" required>
 
                     <label for="comentario"><b>Comentario:</b></label>
-                    <textarea name="comentario" rows="4" cols="39" resize="none" placeholder="Dinos tu consulta u informacion adicional"></textarea>
+                    <textarea id="ventana-comentario" name="comentario" rows="4" cols="39" resize="none" placeholder="Dinos tu consulta u informacion adicional"></textarea>
               
                     <button type="submit" class="btn">Enviar</button>
                     <button type="button" class="btn cancel" onclick="closeForm()">Cerrar</button>
@@ -199,6 +199,12 @@
             function funcionCambio(){
                 document.getElementById("comprar-vender").innerText="Vendo";
                 document.getElementById("comprar-vender-informacion").innerText="Reservamos tu juego y vienes a recojerlo";
+                document.getElementsByName('comentario')[0].placeholder = 'Dinos tu consulta u informacion adicional';
+            }
+            function funcionCambio1(){
+                document.getElementById("comprar-vender").innerText="Compro";
+                document.getElementById("comprar-vender-informacion").innerText="Te decimos lo que puede llegar a valer tu juego o te decimos cuando traerlo";
+                document.getElementsByName('comentario')[0].placeholder = 'Dinos tu consulta u si quieres saber algo especifico de tu juego de tu juego';
             }
         </script>
 

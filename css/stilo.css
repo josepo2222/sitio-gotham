@@ -22,9 +22,6 @@ body{
          ". sd cont cont cont cont cont cont cont ." minmax(8vh, auto)
          ". sd cont cont cont cont cont cont cont ." minmax(8vh, auto)
          ". sd cont cont cont cont cont cont cont ." minmax(8vh, auto)
-         ". sd cont cont cont cont cont cont cont ." minmax(8vh, auto)
-         ". . cont cont cont cont cont cont cont ." minmax(8vh, auto)
-         ". . cont cont cont cont cont cont cont ." minmax(8vh, auto)
          ". . cont cont cont cont cont cont cont ." minmax(8vh, auto)
          ". ft ft ft ft ft ft ft ft ." minmax(4vh, auto)
         /0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
@@ -126,6 +123,18 @@ li{
 nav ol li a:hover{
     color: black;
 } 
+.pagina-actual{
+    background-color: rgba(245, 245, 245, 0.507);
+}
+.pagina-actual a{
+    color: black;
+}
+#pagina-actual{
+    background-color: rgba(245, 245, 245, 0.507);
+}
+.esta-pagina{
+    color: black;
+}
 
 .columna{
     display: flex;
@@ -152,13 +161,11 @@ nav ol li a:hover{
     flex-direction:column;
     display: flex;  
     visibility: hidden;
-    position: relative; 
-    left: 17vw; 
-    top: -14vh;
-    /* left: 23.4vw; */
+    position: absolute; 
+    top: 85vh;
+    right: -11.3vw;
     background-color: rgb(206, 75, 130); 
     z-index: 1;
-    /* margin: -13vh; */
 }
 .desplegable a:hover {
     color: black;
@@ -193,7 +200,12 @@ nav ol li a:hover{
     aspect-ratio: 8/8;
     margin-bottom: 10vh;
 }
-
+.muchas-imagenes a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 2vh;
+}
 /*Videojuegos*/
 
 .muchas-imagenes{
@@ -261,9 +273,9 @@ nav ol li a:hover{
   }
 .form-popup {
     display: none;
-    position: fixed;
-    bottom: 0;
-    right: 15px;
+    position: absolute;
+    bottom: -90vh;
+    right: 0;
     border: 3px solid #f1f1f1;
     z-index: 9;
   }
@@ -283,8 +295,8 @@ nav ol li a:hover{
   }
 .form-container input[type=text], .form-container input[type=tel]{
     width: 90%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
+    padding: 1vh;
+    margin: 1vh 0 22px 0;
     border: none;
     background:rgba(143, 65, 98, 0.62);
     
@@ -292,7 +304,6 @@ nav ol li a:hover{
 .form-container-1 #juego{
     width: 30vw;
     padding: 5px;
-    /* margin: 5px 0 px 0; */
     border: groove whitesmoke 4px;
     background:rgba(167, 87, 120, 0.62);
     text-align: center;
@@ -306,8 +317,13 @@ nav ol li a:hover{
     width: 100%;
     margin-bottom:1vh;
     opacity: 0.8;
-    
 }
+#ventana-comentario{
+    margin-bottom: 5vh;
+    height: 15vh;
+    width: 20vw;
+}
+
 .form-container-1 .boton{
     background-color: rgb(206, 75, 130);
     color: whitesmoke;
@@ -332,4 +348,4 @@ nav ol li a:hover{
 textarea {
     resize: none;
     background:rgba(143, 65, 98, 0.62);
-  }
+}
