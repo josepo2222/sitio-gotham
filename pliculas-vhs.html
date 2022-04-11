@@ -31,10 +31,10 @@
                 <div class="logo"></div>
                 <ol>
                     <li><a href="inicio.html">Inicio</a></li>
-                    <li id="pagina-actual" class="desplegableli"> <a class="esta-pagina" href="videojuegos.html">Videojuegos</a>
+                    <li class="desplegableli"> <a href="videojuegos.html">Videojuegos</a>
                         <div class="desplegable">
                             <div class="columna">
-                            <a class="esta-pagina" id="pagina-actual" href="#">Nes</a>
+                            <a href="#">Nes</a>
                             <a href="#">Master System</a>
                             <a href="#">Atari 7800</a>
                             <a href="#">Game Boy</a>
@@ -55,9 +55,9 @@
                     </div>
                     </li>   
                     <li><a href="#">Consolas</a></li>
-                    <li class="desplegableli"><a href="peliculas.html">Peliculas</a>
+                    <li class="desplegableli" id="pagina-actual"><a href="#" class="esta-pagina">Peliculas</a>
                         <div class="desplegable2">
-                            <a href="pliculas-vhs.html">VHS</a>
+                            <a id="pagina-actual" class="esta-pagina" href="#">VHS</a>
                             <a href="#">DVD</a>
                             <a href="#">BLURAY</a>
                         </div>
@@ -66,26 +66,26 @@
             </nav>
         
             <div class="contenido-principal">
-                <h2>Videojuegos Nintendo Entertainment System</h2>
+                <h2>Pelicula VHS</h2>
                 
                 <div class="galeria">
                     <form name="formulario1" method="post" class="form-container-1">
                         
-                        <label for="juego"> Elegir juego</label>
+                        <label for="juego"> Elegir pelicula</label>
                         <select name="juego" id="juego" >
-                            <option id="1" value="Super Mario Bros. 3">Super Mario Bros. 3</option>
-                            <option id="2" value="Bubble Bobble">Bubble Bobble</option>
-                            <option id="3" value="Pro Wrestling">Pro Wrestling</option>
-                            <option id="4" value="Tetris">Tetris</option>
+                            <option id="1" value="la-sirenita">La sirenita</option>
+                            <option id="2" value="cenicienta">Cenicienta</option>
+                            <option id="3" value="La-bella-y-la-bestia">La Bella y la Bestia</option>
+                            <option id="4" value="power-rangers">Power Rangers</option>
                         </select> 
 
                     </form>
-                    <p id="descripcion">Juego NES Super Mario 3</p>
+                    <p id="descripcion">Pelicula VHS Sirenita</p>
                     <div class="galeria-imagenes">
-                        <img id="imagen-1" src="imagenes/nes-super-mario-3.jpg" alt="Galeria CSS 1" />
-                        <img id="imagen-2" src="imagenes/nes-Bubble Bobble.jpg" alt="Galeria CSS 2" />
-                        <img id="imagen-3" src="imagenes/nes-Pro Wrestling.jpg" alt="Galeria CSS 3" />
-                        <img id="imagen-4" src="imagenes/nes-tetris.jpg" alt="Galeria CSS 4" />
+                        <img id="imagen-1" src="imagenes/la-sirenita.webp" alt="Galeria CSS 1" />
+                        <img id="imagen-2" src="imagenes/cenicienta.jpg" alt="Galeria CSS 2" />
+                        <img id="imagen-3" src="imagenes/bella-bestia.webp" alt="Galeria CSS 3" />
+                        <img id="imagen-4" src="imagenes/power-rangers.webp" alt="Galeria CSS 4" />
                     </div>
                     
 
@@ -94,26 +94,27 @@
 
                 <div class="descripcion-producto">
                     <h2>Caracterisiticas</h2>
-                    <p>Estado producto :<br/><span id="producto-estado">Perfecto</span></p>
+                    <p>Estado del producto:<br/><span id="producto-estado">Perfecto</span></p>
+                    <p>Idioma:<span id="idioma">Ingles</span></p>
                     <p>Descripcion:<br/><span id="producto-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                         Doloribus unde aut beatae magni nobis, qui, cumque illo inventore sit 
                         obcaecati ipsa reiciendis fugiat, cum officia veritatis eum blanditiis 
                         esse deserunt.</span></p>
-                    <p>Precio:<span id="producto-precio">30€ negociable</span></p>
+                    <p>Precio:<span id="producto-precio">30€</span></p>
 
                 </div>
                 <form name="formulario1" method="post" class="form-container-1">
-                    <input type="button" class="boton" onclick="openForm();funcionCambio1()" value="Compro"/>
-                    <input type="button" class="boton" onclick="openForm();funcionCambio()" value="Vendo"/>
+                    <input type="button" id="comprar" class="boton"  value="Compro"/>
+                    <input type="button" id="vender" class="boton"  value="Vendo"/>
                 </form>
             </div>
             
             <footer><p>Copy &copy; 2022 Created by JOSEBA......GOTHAM-RETRO-GAME</p></footer>
         
             <div class="form-popup" id="myForm">
-                <form action="/action_page.php" class="form-container">
+                <form action="#" class="form-container">
                     <h3 id="comprar-vender">Comprar</h3>
-                    <p id="comprar-vender-informacion">Reservamos tu juego y vienes a recojerlo</p>
+                    <p id="comprar-vender-informacion">Reservamos tu pelicula y vienes a recojerlo</p>
                     <label for="nombre"><b>Nombre:</b></label>
                     <input class="ventana-escritura" type="text" placeholder="Juan" name="nombre" id="nombre" required>
                     <label for="email"><b>Email:</b></label>
@@ -125,8 +126,8 @@
                     <label for="comentario"><b>Comentario:</b></label>
                     <textarea id="ventana-comentario" name="comentario" rows="4" cols="39" resize="none" placeholder="Dinos tu consulta u informacion adicional"></textarea>
               
-                    <button type="submit" class="btn">Enviar</button>
-                    <button type="button" class="btn cancel" onclick="closeForm()">Cerrar</button>
+                    <button id="boton-enviar" type="submit" class="btn">Enviar</button>
+                    <button id="boton-cerrar" type="button" class="btn cancel">Cerrar</button>
                 </form>
               </div>
         
@@ -147,7 +148,7 @@
             document.getElementById("comprar").addEventListener("click", funcionCambio1);
             document.getElementById("vender").addEventListener("click", openForm);
             document.getElementById("vender").addEventListener("click", funcionCambio);
-            
+            document.getElementById("boton-cerrar").addEventListener("click", closeForm);
             function revisar(){
                 elegidoJuego=(document.getElementById("juego").selectedIndex)+1;
                 if(elegidoJuego!=juegoViejo){
@@ -158,24 +159,24 @@
                     switch(elegidoJuego){
                         case 1:
                         console.log("entra en el 1");
-                        intento=document.getElementById("descripcion").innerText ="Juego Nes Super Mario Brothers 3";
+                        intento=document.getElementById("descripcion").innerText ="Pelicula VHS Sirenita";
                         document.getElementById("producto-estado").innerText ="Perfecto";
                         document.getElementById("producto-descripcion").innerText ="Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus unde aut beatae magni nobis, qui, cumque illo inventore sit obcaecati ipsa reiciendis fugiat, cum officia veritatis eum blanditiis esse deserunt.";
-                        document.getElementById("producto-precio").innerText ="30€ negociables";
+                        document.getElementById("producto-precio").innerText ="30€";
                         break;
 
                         case 2:
                         console.log("entra en el 2");
-                        document.getElementById("descripcion").innerText ="Juego Nes BuBBle Bobble";
+                        document.getElementById("descripcion").innerText ="Pelicula VHS Cenicienta";
                         document.getElementById("producto-estado").innerText ="Muy usado";
                         document.getElementById("producto-descripcion").innerText ="ipsum dolor sit amet consectetur adipisicing elit. Doloribus unde aut beatae magni nobis, qui, cumque illo inventore sit obcaecati ipsa reiciendis fugiat, cum officia veritatis eum blanditiis esse deserunt.";
-                        document.getElementById("producto-precio").innerText ="45€";
+                        document.getElementById("producto-precio").innerText ="49€";
                         
                         break;
 
                         case 3:
                         console.log("entra en el 3");
-                        document.getElementById("descripcion").innerText ="Juego Nes Pro Wrestling";
+                        document.getElementById("descripcion").innerText ="Pelicula VHS La Bella y la Bestia";
                         document.getElementById("producto-estado").innerText ="Usado";
                         document.getElementById("producto-descripcion").innerText ="Dolor ipsum dolor sit amet consectetur adipisicing elit. Doloribus unde aut beatae magni nobis, qui, cumque illo inventore sit obcaecati ipsa reiciendis fugiat, cum officia veritatis eum blanditiis esse deserunt.";
                         document.getElementById("producto-precio").innerText ="15€";
@@ -183,7 +184,7 @@
 
                         case 4:
                         console.log("entra en el 4");
-                        document.getElementById("descripcion").innerText ="Juego Nes Tetris";
+                        document.getElementById("descripcion").innerText ="Pelicula VHS Power Ramgers";
                         document.getElementById("producto-estado").innerText ="Perfecto";
                         document.getElementById("producto-descripcion").innerText ="Sit ipsum dolor sit amet consectetur adipisicing elit. Doloribus unde aut beatae magni nobis, qui, cumque illo inventore sit obcaecati ipsa reiciendis fugiat, cum officia veritatis eum blanditiis esse deserunt.";
                         document.getElementById("producto-precio").innerText ="75€";

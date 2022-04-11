@@ -22,6 +22,8 @@ body{
          ". sd cont cont cont cont cont cont cont ." minmax(8vh, auto)
          ". sd cont cont cont cont cont cont cont ." minmax(8vh, auto)
          ". sd cont cont cont cont cont cont cont ." minmax(8vh, auto)
+         ". sd cont cont cont cont cont cont cont ." minmax(8vh, auto)
+         ". sd cont cont cont cont cont cont cont ." minmax(8vh, auto)
          ". . cont cont cont cont cont cont cont ." minmax(8vh, auto)
          ". ft ft ft ft ft ft ft ft ." minmax(4vh, auto)
         /0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
@@ -34,6 +36,7 @@ header{
     text-align: center;
     color: whitesmoke;
     font-family: 'arcaderegular';
+    margin: 0;
 }
 header h1{
     text-shadow: 1px 1px 2px black;
@@ -70,6 +73,7 @@ nav{
     grid-area: cont;
     background-color: rgba(206, 75, 130, 0.62);
     text-align: center;
+    margin-top: 0;
    
 }
 
