@@ -103,8 +103,8 @@
 
                 </div>
                 <form name="formulario1" method="post" class="form-container-1">
-                    <input type="button" class="boton" onclick="openForm();funcionCambio1()" value="Compro"/>
-                    <input type="button" class="boton" onclick="openForm();funcionCambio()" value="Vendo"/>
+                    <input id="comprar" type="button" class="boton" value="Compro"/>
+                    <input id="vender" type="button" class="boton" value="Vendo"/>
                 </form>
             </div>
             
@@ -126,7 +126,7 @@
                     <textarea id="ventana-comentario" name="comentario" rows="4" cols="39" resize="none" placeholder="Dinos tu consulta u informacion adicional"></textarea>
               
                     <button type="submit" class="btn">Enviar</button>
-                    <button type="button" class="btn cancel" onclick="closeForm()">Cerrar</button>
+                    <button id="cerrar" type="button" class="btn cancel" >Cerrar</button>
                 </form>
               </div>
         
@@ -147,6 +147,7 @@
             document.getElementById("comprar").addEventListener("click", funcionCambio1);
             document.getElementById("vender").addEventListener("click", openForm);
             document.getElementById("vender").addEventListener("click", funcionCambio);
+            document.getElementById("cerrar").addEventListener("click",closeForm);
             
             function revisar(){
                 elegidoJuego=(document.getElementById("juego").selectedIndex)+1;

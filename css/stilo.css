@@ -111,6 +111,12 @@ li{
     background-position: center;
 }
 
+#mapa iframe{
+    margin-bottom: 10vh;
+    border: solid 5px black;
+    width: 40vw;
+    height: 45vh;
+}
 /*//////////////////////////////////////Menu//////////////////////////////////////////*/
 
 .desplegableli:hover .desplegable{
@@ -166,7 +172,7 @@ nav ol li a:hover{
     display: flex;  
     visibility: hidden;
     position: absolute; 
-    top: 85vh;
+    top: 77.5vh;
     right: -11.3vw;
     background-color: rgb(206, 75, 130); 
     z-index: 1;
@@ -312,6 +318,11 @@ nav ol li a:hover{
     background:rgba(167, 87, 120, 0.62);
     text-align: center;
 }
+
+.form-container-1 .boton:hover{
+    opacity: 1;
+  }
+
 .form-container .btn {
     background-color: rgb(206, 75, 130);
     color: whitesmoke;
