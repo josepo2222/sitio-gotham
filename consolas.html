@@ -153,11 +153,11 @@
             }
 
             function onHandleClick(handle) {
-            const progressBar = handle.closest(".row").querySelector(".progress-bar")
-            const slider = handle.closest(".container").querySelector(".slider")
+            const progressBar = handle.closest(".row").querySelector(".progress-bar");
+            const slider = handle.closest(".container").querySelector(".slider");
             const sliderIndex = parseInt(
                 getComputedStyle(slider).getPropertyValue("--slider-index")
-            )
+            );
             const progressBarItemCount = progressBar.children.length
             if (handle.classList.contains("left-handle")) {
                 if (sliderIndex - 1 < 0) {
