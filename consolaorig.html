@@ -1,0 +1,122 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Page Title</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+        <link href="css/stilo.css" rel="stylesheet">
+	</head>
+
+	<body>
+        <div class="simbolo"></div>
+        
+        <div class="contenedor">
+            <header>
+                <div class="header-imagenes">
+                    <img src="imagenes/arkanoid.png"/>
+                    <img src="imagenes/hadoken.png"/>
+                </div>
+                <div>
+                    <h1>Arkham</h1>
+                    <p>Retro Games</p>
+                </div>
+                <div class="header-imagenes">
+                    <img src="imagenes/tetris.png"/>
+                    <img src="imagenes/joystick.png"/>
+                </div>
+            </header>
+            
+            <nav>
+                <div class="logo"></div>
+                <ol>
+                    <li class="pagina-actual"><a href="#">Inicio</a></li>
+                    <li class="desplegableli"> <a href="videojuegos.html">Videojuegos</a>
+                        <div class="desplegable">
+                            <div class="columna">
+                            <a href="videojuegos-nintendo-nes.html">Nes</a>
+                            <a href="#">Master System</a>
+                            <a href="#">Atari 7800</a>
+                            <a href="#">Game Boy</a>
+                        </div><div class="columna">
+                            <a href="#">Neo Geo</a>
+                            <a href="#">Game Boy Color</a>
+                            <a href="#">PS1</a>
+                            <a href="#">Sega Gamegear</a>
+                        </div><div class="columna">
+                            <a href="#">PS2</a>
+                            <a href="#">Dreamcast</a>
+                            <a href="#">Xbox</a>
+                            <a href="#">GameBoy Advance</a>
+                        </div><div class="columna">
+                            <a href="#">Nintendo wii</a>
+                            <a href="#">GameBoy</a>
+                        </div>
+                    </div>
+                    </li>   
+                    <li><a href="#">Consolas</a></li>
+                    <li class="desplegableli"><a href="peliculas.html">Peliculas</a>
+                        <div class="desplegable2">
+                            <a href="pliculas-vhs.html">VHS</a>
+                            <a href="#">DVD</a>
+                            <a href="#">BLURAY</a>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+        
+            <div class="contenido-principal">
+                <h2>El lugar donde se reune lo retro</h2>
+                <div class="row">
+                    <div class="container">
+                      <button class="handle left-handle">
+                        <div class="text">&#8249;</div>
+                      </button>
+                      <div class="slider">
+                        <img src="imagenes/NEO-GEOCD.jpg">
+                        <img src="imagenes/Gameboy-Advance-SP.jpg">
+                        <img src="imagenes/Nintendo-NES.webp">
+                        <img src="imagenes/Dreamcast-Console-Set.png">
+                        <img src="imagenes/xbox.jpg">
+                        <img src="imagenes/PS2-Versions.png">
+                       
+                      </div>
+                      <button class="handle right-handle">
+                        <div class="text">&#8250;</div>
+                      </button>
+                    </div>
+                </div>
+                
+
+            </div>
+            
+            <footer>
+                <p>Copy &copy; 2022 Created by JOSEBA......GOTHAM-RETRO-GAME</p>
+            </footer>
+        
+        
+        
+        
+        
+        
+        </div>
+        <script>
+            document.addEventListener("click", e =>{
+                let handle;
+                if (e.target.matches(".handle")){
+                     handle = e.target;
+                    }
+                    else{
+                        handle= e.target.closest(".handle");
+                    }
+                if(handle !== null) onhan {
+                    
+                }
+            })
+        
+
+
+
+        </script>
+	</body>
+</html>
