@@ -366,12 +366,10 @@ textarea {
 }
 /* slider consolas */
 
-:root{
-    
-}
-.container {
+/* .container {
     display: flex;
     justify-content: center;
+    
 }
 .sider{
     --slider-index: 0;
@@ -379,6 +377,7 @@ textarea {
     flex-grow: 1;
     margin:0 .25rem;
     transform: translateX(calc(var(--slider-index)*-100%));
+    transition: transform 250ms ease-in-out;
 }
 .slider > img{
     flex:0 0 25%;
@@ -416,7 +415,6 @@ textarea {
 
 .handle:hover,.handle:focus{
     background-color: rgba(0,0,0, .5);
-    
 }
 
 
@@ -426,4 +424,4 @@ textarea {
 
 .handle:hover .text,.handle:focus .text{
     transform: scale(1.2);
-}
+} */
